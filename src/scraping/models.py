@@ -1,4 +1,5 @@
 from django.db import models
+from django.templatetags.i18n import language
 
 from scraping.utils import from_cyrillic_to_eng
 
@@ -35,3 +36,40 @@ class Language(models.Model):
         if not self.slug:
             self.slug = from_cyrillic_to_eng(str(self.name))
         super().save(*args, **kwargs)
+
+
+class Vacancy(models.Model):
+    url = models.URLField(unique=True)
+    title = models.CharField(max_length=250, verbose_name='Заголовок вакансії')
+    company = models.CharField(max_length=250, verbose_name='Компанія')
+    description = models.TextField(verbose_name='Опис вакансії')
+    city = models.ForeignKey('City', on_delete=models.CASCADE, verbose_name='Місто')
+    language = models.ForeignKey('Language', on_delete=models.CASCADE, verbose_name='Мова програмування')
+    timestamp = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Вакансія'
+        verbose_name_plural = 'Вакансії'
+
+    def __str__(self):
+        return self.title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
