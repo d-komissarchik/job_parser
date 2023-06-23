@@ -55,6 +55,7 @@ class Vacancy(models.Model):
         return self.title
 
 
+# from scraping.models import City, Language
 
 
 

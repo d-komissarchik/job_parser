@@ -1,0 +1,10 @@
+{% extends 'scraping/base.html' %}
+
+>{% block title %} Home {% endblock %}
+
+{% block content %}
+    {% for obj in object_list %}
+        <p>There is a <a href="{{ obj.url }}">{{ obj.title }}</a></p>
+        <p>{{ obj.description }}</p>
+    {% endfor %}
+{% endblock %}
