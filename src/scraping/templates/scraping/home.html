@@ -4,7 +4,14 @@
 
 {% block content %}
     {% for obj in object_list %}
-        <p>There is a <a href="{{ obj.url }}">{{ obj.title }}</a></p>
-        <p>{{ obj.description }}</p>
+        <div class="card my-3">
+          <div class="card-header">
+            <a href="{{ obj.url }}">{{ obj.title }}</a>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{ obj.description }}</p>
+          </div>
+        </div>
+
     {% endfor %}
 {% endblock %}
