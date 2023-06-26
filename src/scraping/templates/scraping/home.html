@@ -6,13 +6,23 @@
     {% for obj in object_list %}
         <div class="card my-3">
           <h5 class="card-header"><a href="{{ obj.url }}">{{ obj.title }}</a>
-              <p>{{ obj.company }} | {{ obj.language.name }} : <small>{{ obj.timestamp|date:"d-M-Y" }}</small></p></h5>
+              <p>{{ obj.company }} | {{ obj.city.name }} : <small>{{ obj.timestamp|date:"d-M-Y" }}</small></p></h5>
           <div class="card-body">
-
             <p class="card-text">{{ obj.description }}</p>
-              <h5>Мiсто: {{ obj.city.name }}</h5>
           </div>
         </div>
-
+    {% empty %}
+        <h4>Вакансій немає</h4>
     {% endfor %}
+
+<div class="row">
+    <div class="col-md-6">
+        <form action="">
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-primary">Знайти</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
