@@ -140,6 +140,4 @@ if __name__ == '__main__':
     h.close()
 
 
-#class="list-unstyled list-jobs"   так и есть
-#class="list-jobs__item list__item" элементы списка у него просто list-jobs__item
-#list-jobs__description position-relative
+
