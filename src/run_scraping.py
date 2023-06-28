@@ -29,6 +29,7 @@ for func, url in parsers:
     jobs += j
     errors += e
 
+
 for job in jobs:
     v = Vacancy(**job, city=city, language=language)
     try:
