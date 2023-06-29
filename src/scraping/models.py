@@ -55,6 +55,12 @@ class Vacancy(models.Model):
         return self.title
 
 
+class Error(models.Model):
+    timestamp = models.DateField(auto_now_add=True)
+    data = models.JSONField()
+
+
+
 # from scraping.models import City, Language
 
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import City, Language, Vacancy
+from .models import City, Language, Vacancy, Error
 
 
 @admin.register(City)
@@ -15,3 +15,8 @@ class LanguageAdmin(admin.ModelAdmin):
 @admin.register(Vacancy)
 class VacancyAdmin(admin.ModelAdmin):
     list_display = ['title', 'company', 'city', 'language', 'timestamp']
+
+
+@admin.register(Error)
+class ErrorAdmin(admin.ModelAdmin):
+    list_display = ['timestamp', 'data']
