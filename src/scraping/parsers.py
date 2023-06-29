@@ -45,7 +45,7 @@ def work(url):
     return jobs, errors
 
 
-# def rabota(url, city=None, language=None):
+# def rabota(url):
 #     jobs = []
 #     errors = []
 #     domain = 'https://rabota.ua'
