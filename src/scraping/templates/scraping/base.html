@@ -9,28 +9,29 @@
     <link rel="icon" href="{% static 'favicon.ico' %}">
     <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <link rel="stylesheet" href="{% static 'css/main.css' %}">
      <title>{% block title %} My Amazing site {% endblock %}</title>
    </head>
    <body>
-       <nav class="navbar navbar-expand-lg bg-body-tertiary">
+       <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #144ADA ;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="">Navbar</a>
+        <a class="navbar-brand" href="" id = brand>Job Parser</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home'%}" id = brand>Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#" id = brand>Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#" id = brand>Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link disabled" id = brand>Disabled</a>
             </li>
           </ul>
         </div>
