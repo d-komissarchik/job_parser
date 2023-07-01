@@ -15,6 +15,7 @@ class LanguageAdmin(admin.ModelAdmin):
 @admin.register(Vacancy)
 class VacancyAdmin(admin.ModelAdmin):
     list_display = ['title', 'company', 'city', 'language', 'timestamp']
+    list_per_page = 10
 
 
 @admin.register(Error)
