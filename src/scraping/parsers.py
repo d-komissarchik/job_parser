@@ -118,9 +118,9 @@ def djinni(url):
     resp = requests.get(url, headers=headers[randint(0, 2)])
     if resp.status_code == 200:
         soup = BS(resp.content, 'html.parser')
-        main_ul = soup.find('ul', attrs={'class': 'list-unstyled list-jobs'})
+        main_ul = soup.find('ul', attrs={'class': 'list-unstyled list-jobs mb-5'})
         if main_ul:
-            li_list = main_ul.find_all('li', attrs={'class': 'list-jobs__item list__item'})
+            li_list = main_ul.find_all('li', attrs={'class': 'list-jobs__item mb-5 list__item'})
             for li in li_list:
                 if '__hot' not in li['class']:
                     title = li.find('div', attrs={'class': 'list-jobs__title'})

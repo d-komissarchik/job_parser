@@ -39,12 +39,12 @@ for job in jobs:
         pass
 
 if errors:
-    qs = Error.objects.filter(timestamp=dt.date.today())
-    if qs.exists():
-        err = qs.first()
-        err.data.update({'errors': errors})
-        err.save()
-    else:
+    # qs = Error.objects.filter(timestamp=dt.date.today())
+    # if qs.exists():
+    #     err = qs.first()
+    #     err.data.update({'errors': errors})
+    #     err.save()
+    # else:
         er = Error(data=f'errors:{errors}').save()
 
 # h = codecs.open('work.txt', 'w', 'utf-8')
