@@ -10,6 +10,7 @@ os.environ["DJANGO_SETTINGS_MODULE"] = "scraping_service.settings"
 
 import django
 
+
 django.setup()
 
 from scraping.parsers import *
